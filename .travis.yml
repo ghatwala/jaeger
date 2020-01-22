@@ -1,6 +1,12 @@
 sudo: required
 
-arch: ppc64le
+matrix:
+  include:
+    - dist: bionic
+      arch: amd64
+    - dist: bionic
+      arch: ppc64le
+ 
 
 language: go
 go_import_path: github.com/jaegertracing/jaeger
